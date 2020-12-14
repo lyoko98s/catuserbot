@@ -22,16 +22,16 @@ async def corona(event):
         hmm1 = country_data["confirmed"] + country_data["new_cases"]
         hmm2 = country_data["deaths"] + country_data["new_deaths"]
         data = ""
-        data += f"\n🥺الحالات اليوم       : <code>{country_data['new_cases']}</code>"
-        data += f"\n😟الوفيات اليوم      : <code>{country_data['new_deaths']}</code>"
-        data += f"\n\n⚠️الحالات الإجمالية    : <code>{hmm1}</code>"
-        data += f"\n⚰️إجمالي الوفيات     : <code>{hmm2}</code>"
-        data += f"\n😔الحالات النشطة      : <code>{country_data['active']}</code>"
-        data += f"\n🤕الحالات الحرجة      : <code>{country_data['critical']}</code>"
-        data += f"\n😊المتعافين          : <code>{country_data['recovered']}</code>"
-        data += f"\n💉إجمالي الاختبارات   : <code>{country_data['total_tests']}</code>"
+        data += f"\n🥺 الحالات اليوم   :   <code>{country_data['new_cases']}</code>"
+        data += f"\n😟 الوفيات اليوم   :   <code>{country_data['new_deaths']}</code>"
+        data += f"\n\n⚠️ الحالات الإجمالية  :   <code>{hmm1}</code>"
+        data += f"\n⚰️ إجمالي الوفيات     :   <code>{hmm2}</code>"
+        data += f"\n😔 الحالات النشطة     :   <code>{country_data['active']}</code>"
+        data += f"\n🤕 الحالات الحرجة     :   <code>{country_data['critical']}</code>"
+        data += f"\n😊     المتعافين          :   <code>{country_data['recovered']}</code>"
+#        data += f"\n💉 إجمالي الاختبارات   :   <code>{country_data['total_tests']}</code>"
         await catevent.edit(
-            "<b>🦠إحصائيات كورونا 👉🏽 {}:\n{}</b>".format(country, data),
+            "<b>🦠 إحصائيات كورونا 👈🏼 {} :\n{}</b>".format(country, data),
             parse_mode="html",
         )
     else:
